@@ -18,7 +18,6 @@ export default function App() {
 
   const checkBiometricAuthenticationAndOpenPrompt = async () => {
     await openBiometricAuthenticatePrompt().then((res) => {
-      console.log(res);
       setRsponse(res);
     })
   }

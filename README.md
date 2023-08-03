@@ -15,7 +15,25 @@ import { openBiometricAuthenticatePrompt } from 'react-native-biometric-locks';
 
 // ...
 
-const result = await openBiometricAuthenticatePrompt();
+const result = await openBiometricAuthenticatePrompt((res)=>{
+    // res - {"message": "SUCCESS", "result": true}
+    setResult(result);
+});
+
+ /* 
+ Response will be an object with two keys
+ message - value
+ result - value
+
+ Response --> {"message": "SUCCESS", "result": true}
+
+ message - Biometric message, Success, Failed, Biometrics available or not enrolled etc.
+ result - It will tell that biometric authentication success or failed.
+
+ Note ----> If there is no biometric enrolled than it will return true in result with Biometric features not
+            enrolled in Android and Biometric authentication is not available on this device in iOS.
+*/
+
 ```
 
 ## Contributing
