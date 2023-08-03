@@ -11,11 +11,11 @@ npm install react-native-biometric-locks
 ## Usage
 
 ```js
-import { multiply } from 'react-native-biometric-locks';
+import { openBiometricAuthenticatePrompt } from 'react-native-biometric-locks';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await openBiometricAuthenticatePrompt();
 ```
 
 ## Contributing

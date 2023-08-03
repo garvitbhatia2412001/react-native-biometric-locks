@@ -9,14 +9,14 @@ const LINKING_ERROR =
 const BiometricLocks = NativeModules.BiometricLocks
   ? NativeModules.BiometricLocks
   : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+    {},
+    {
+      get() {
+        throw new Error(LINKING_ERROR);
+      },
+    }
+  );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return BiometricLocks.multiply(a, b);
+export function openBiometricAuthenticatePrompt(): Promise<Object> {
+  return BiometricLocks.openBiometricAuthenticatePrompt()
 }
