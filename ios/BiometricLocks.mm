@@ -23,7 +23,7 @@ RCT_EXPORT_METHOD(openBiometricAuthenticatePrompt:(RCTPromiseResolveBlock)resolv
                 if (success) {
                     // Authentication successful
                     
-                    NSString *biometricMessage = @"Authenticate with Face ID";
+                    NSString *biometricMessage = @"SUCCESS";
                         NSDictionary *result = @{
                           @"result": @(YES),
                           @"message": biometricMessage
@@ -32,7 +32,7 @@ RCT_EXPORT_METHOD(openBiometricAuthenticatePrompt:(RCTPromiseResolveBlock)resolv
                     resolve(result);
                 } else {
                     // Authentication failed
-                    NSString *biometricMessage = @"Authenticate Failed with Face ID";
+                    NSString *biometricMessage = @"FAILED";
                         NSDictionary *result = @{
                           @"result": @(NO),
                           @"message": biometricMessage
@@ -49,7 +49,7 @@ RCT_EXPORT_METHOD(openBiometricAuthenticatePrompt:(RCTPromiseResolveBlock)resolv
                             reply:^(BOOL success, NSError *error) {
               if (success) {
                   // Authentication successful
-                  NSString *biometricMessage = @"Authenticate with Touch ID";
+                  NSString *biometricMessage = @"SUCCESS";
                       NSDictionary *result = @{
                         @"result": @(YES),
                         @"message": biometricMessage
@@ -58,7 +58,7 @@ RCT_EXPORT_METHOD(openBiometricAuthenticatePrompt:(RCTPromiseResolveBlock)resolv
                   resolve(result);
                 } else {
                     // Authentication failed
-                    NSString *biometricMessage = @"Authenticate Failed with Touch ID";
+                    NSString *biometricMessage = @"FAILED";
                         NSDictionary *result = @{
                           @"result": @(NO),
                           @"message": biometricMessage
@@ -75,7 +75,7 @@ RCT_EXPORT_METHOD(openBiometricAuthenticatePrompt:(RCTPromiseResolveBlock)resolv
                             reply:^(BOOL success, NSError *error) {
               if (success) {
                     // Authentication successful
-                  NSString *biometricMessage = @"Authenticate with Passcode";
+                  NSString *biometricMessage = @"SUCCESS";
                       NSDictionary *result = @{
                         @"result": @(YES),
                         @"message": biometricMessage
@@ -84,7 +84,7 @@ RCT_EXPORT_METHOD(openBiometricAuthenticatePrompt:(RCTPromiseResolveBlock)resolv
                   resolve(result);
                 } else {
                     // Authentication failed
-                    NSString *biometricMessage = @"Authenticate Failed with Passcode";
+                    NSString *biometricMessage = @"FAILED";
                         NSDictionary *result = @{
                           @"result": @(NO),
                           @"message": biometricMessage

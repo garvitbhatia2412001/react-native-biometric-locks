@@ -1,6 +1,6 @@
 {
   "name": "react-native-biometric-locks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native module for biometric functionality for Touch ID, Face ID, Passcode and other biometrics. Supports both iOS and Android.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -41,7 +41,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "biometric",
+    "lock"
   ],
   "repository": "https://github.com/garvitbhatia2412001/react-native-biometric-locks",
   "author": "Garvit Bhatia <garvitbhatia2412001@gmail.com> (https://github.com/garvitbhatia2412001)",

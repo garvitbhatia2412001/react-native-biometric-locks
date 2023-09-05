@@ -15,10 +15,9 @@ import { openBiometricAuthenticatePrompt } from 'react-native-biometric-locks';
 
 // ...
 
-const result = await openBiometricAuthenticatePrompt((res)=>{
-    // res - {"message": "SUCCESS", "result": true}
-    setResult(result);
-});
+const response = await openBiometricAuthenticatePrompt();
+
+// response = {"message": "SUCCESS", "result": true}
 
  /* 
  Response will be an object with two keys
